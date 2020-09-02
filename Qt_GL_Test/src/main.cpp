@@ -10,12 +10,12 @@ void debugFormatVersion()
     QSurfaceFormat::OpenGLContextProfile prof = form.profile();
 
     const char *profile =
-        prof == QSurfaceFormat::CoreProfile ? "Core" :
-        prof == QSurfaceFormat::CompatibilityProfile ? "Compatibility" :
-        "None";
+            prof == QSurfaceFormat::CoreProfile ? "Core" :
+                                                  prof == QSurfaceFormat::CompatibilityProfile ? "Compatibility" :
+                                                                                                 "None";
 
     printf("Requested format:\n");
-    printf("  Version: %d.%d\n", form.majorVersion(), form.minorVersion());
+    printf ("  Version: %d.%d\n", form.majorVersion(), form.minorVersion());
     printf("  Profile: %s\n", profile);
 }
 
